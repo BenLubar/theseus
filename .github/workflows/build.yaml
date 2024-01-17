@@ -16,7 +16,7 @@ jobs:
         env:
           GOOS: js
           GOARCH: wasm
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: "data/"
   deploy-pages:
