@@ -1,0 +1,35 @@
+The source code in this repository is licensed under MIT (see LICENSE).
+However, some of the assets used in the example are taken from other
+sources with different licenses. This means that the example program, if
+distributed along with its assets, is NOT free software. The relevant
+assets, along with where they are from and rationale for using a non-free
+asset, are listed below:
+
+---
+
+Source Engine error model.
+
+Taken from Alien Swarm: Reactive Drop, but the same model is used across
+all Source Engine games. The model is used here because I want to match
+what would happen in Source Engine with this toy renderer implementation
+as closely as I am able. Since this project is a testbed for Alien Swarm:
+Reactive Drop, I am considering these files to be available to me under the
+same non-commercial license that allows them to be included in Alien Swarm:
+Reactive Drop.
+
+data/materials/models/error/new light1.vmt
+data/materials/models/error/new light1.vtf
+data/models/error.dx90.vtx
+data/models/error.mdl
+data/models/error.vvd
+
+---
+
+Go WebAssembly bootstrapper.
+
+Taken from Go 1.21. Used to run the toy renderer implementation in browsers.
+Go is available under a BSD 3-clause license, which is similar to the MIT
+license used for this code, but it is mentioned here as the copyright holder
+is different than this project's.
+
+data/wasm_exec.js

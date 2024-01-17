@@ -1,0 +1,31 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  wasm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+      - run: go build -v -o data/toy-renderer-implementation.wasm
+        env:
+          GOOS: js
+          GOARCH: wasm
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          path: "data/"
+  deploy-pages:
+    needs: wasm
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
