@@ -12,13 +12,11 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version: ">=1.21"
-      - run: go build -v -o data/toy-renderer-implementation.wasm
+      - run: go build -v -o _site/toy-renderer-implementation.wasm
         env:
           GOOS: js
           GOARCH: wasm
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: "data/"
   deploy-pages:
     needs: wasm
     permissions:

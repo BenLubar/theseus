@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Toy Game Renderer Implementation</title>
+</head>
+<body>
+<script src="wasm_exec.js"></script>
+<script>
+"use strict";
+const go = new Go();
+
+if (!WebAssembly.instantiateStreaming) {
+	// polyfill
+	WebAssembly.instantiateStreaming = async (resp, importObject) => {
+		const source = await (await resp).arrayBuffer();
+		return await WebAssembly.instantiate(source, importObject);
+	};
+}
+
+let module, instance;
+WebAssembly.instantiateStreaming(fetch("toy-renderer-implementation.wasm"), go.importObject).then(r => {
+	module = r.module;
+	instance = r.instance;
+	await go.run(instance)
+});
+</script>
+</body>
+</html>

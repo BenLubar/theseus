@@ -32,4 +32,4 @@ Go is available under a BSD 3-clause license, which is similar to the MIT
 license used for this code, but it is mentioned here as the copyright holder
 is different than this project's.
 
-data/wasm_exec.js
+_site/wasm_exec.js

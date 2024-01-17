@@ -1,8 +1,12 @@
 package auto
 
-import "flag"
+import (
+	"flag"
 
-func Main() {
+	"github.com/BenLubar/toy-renderer-implementation/backend"
+)
+
+func Main(iface backend.GameInterface) {
 	flag.Parse()
 
 	for {
