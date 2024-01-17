@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/BenLubar/toy-renderer-implementation/backend"
+	"github.com/BenLubar/theseus/backend"
 )
 
 // Chosen interfaces. Only valid once Main has been called.

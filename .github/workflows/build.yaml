@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version: ">=1.21"
-      - run: go build -v -o _site/toy-renderer-implementation.wasm
+      - run: go build -v -o _site/theseus-example.wasm
         env:
           GOOS: js
           GOARCH: wasm

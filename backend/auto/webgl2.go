@@ -2,6 +2,6 @@
 
 package auto
 
-import "github.com/BenLubar/toy-renderer-implementation/backend/webgl2"
+import "github.com/BenLubar/theseus/backend/webgl2"
 
 var _ = addGraphicsCandidate("webgl2", webgl2.Graphics, 120)

@@ -19,7 +19,7 @@ if (!WebAssembly.instantiateStreaming) {
 }
 
 let module, instance;
-WebAssembly.instantiateStreaming(fetch("toy-renderer-implementation.wasm"), go.importObject).then(r => {
+WebAssembly.instantiateStreaming(fetch("theseus-example.wasm"), go.importObject).then(r => {
 	module = r.module;
 	instance = r.instance;
 	return go.run(instance);

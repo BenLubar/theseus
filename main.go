@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/BenLubar/toy-renderer-implementation/backend/auto"
-	"github.com/BenLubar/toy-renderer-implementation/example"
+	"github.com/BenLubar/theseus/backend/auto"
+	"github.com/BenLubar/theseus/example"
 )
 
 func main() {

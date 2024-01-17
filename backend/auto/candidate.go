@@ -4,7 +4,7 @@ import (
 	"log"
 	"sort"
 
-	"github.com/BenLubar/toy-renderer-implementation/backend"
+	"github.com/BenLubar/theseus/backend"
 )
 
 type graphicsCandidate struct {

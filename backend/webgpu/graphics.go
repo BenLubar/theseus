@@ -6,7 +6,7 @@ import (
 	"context"
 	"syscall/js"
 
-	"github.com/BenLubar/toy-renderer-implementation/internal"
+	"github.com/BenLubar/theseus/internal"
 )
 
 var Graphics graphics

@@ -2,7 +2,7 @@
 
 package auto
 
-import "github.com/BenLubar/toy-renderer-implementation/backend/null"
+import "github.com/BenLubar/theseus/backend/null"
 
 var (
 	_ = addGraphicsCandidate("null", null.Graphics, 0)

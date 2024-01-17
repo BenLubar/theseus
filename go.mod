@@ -1,3 +1,3 @@
-module github.com/BenLubar/toy-renderer-implementation
+module github.com/BenLubar/theseus
 
 go 1.21.2
